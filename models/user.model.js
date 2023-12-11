@@ -13,7 +13,7 @@ class User {
             city: city
         };
     }
-
+  // even though its returning a promise since we aint doing anything later with data just simply return
     getUserwithSameEmail(){
         return db.getDb().collection('users').findOne({email: this.email});
     }
