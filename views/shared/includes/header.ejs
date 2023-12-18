@@ -1,16 +1,18 @@
-<header>
-    <div><a href="/">MAH</a></div>
+<header id="main-header">
+    <div id="logo"><a href="/">MAH</a></div>
     <nav>
-        <ul>
-            <% if(locals.isAuth) { %>
-            <li>
-                <form action="/logout" method="post">
-                    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
-                    <button>Logout</button>
-                </form>
-                
-            </li>
-            <% } %>
-        </ul>
+        <%- include('nav-items') %>
     </nav>
+    <button id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
+<!-- aside here for mobile section -->
+<aside id="mobile-menu">
+    <nav>
+        <%- include('nav-items') %>
+    </nav>
+
+</aside>
